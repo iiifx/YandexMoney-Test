@@ -14,6 +14,11 @@
     }
 </style>
 
+<div>
+    <h4>Токен oAuth</h4>
+    <input type="text" name="token" value="" />
+</div>
+
 <form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
     <h4>Права авторизации oAuth:</h4>
 
