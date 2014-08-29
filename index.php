@@ -2,6 +2,24 @@
 
 session_start();
 
+define( 'BASEDIR', realpath( __DIR__ . '/../' ) );
+
+$loadList = array (
+    BASEDIR . 'composer/vendor/autoload.php',
+    BASEDIR . 'options/seller.php'
+);
+
+foreach ( $loadList as $filePath ) {
+    /** @noinspection PhpIncludeInspection */
+    require_once( $filePath );
+}
+
+if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
+    str_replace( '..', '.', $do );
+    /** @noinspection PhpIncludeInspection */
+    require_once( BASEDIR . "do/{$do}.php" );
+}
+
 ?>
 
 <style type="text/css">
@@ -40,7 +58,7 @@ session_start();
     <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
 </div>
 
-<form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
+<form method="POST" action="/?do=oauth_request" id="oAuthForm">
     <h4>Права авторизации oAuth:</h4>
 
     <label for="account-info">
