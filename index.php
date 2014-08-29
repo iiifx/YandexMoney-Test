@@ -15,6 +15,7 @@
 </style>
 
 <form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
+    <h4>Права авторизации oAuth:</h4>
 
     <label for="account-info">
         <input type="checkbox" name="scope[account-info]" value="account-info" id="account-info" checked /> account-info
@@ -41,5 +42,5 @@
         <input type="checkbox" name="scope[money-source]" value="money-source" id="money-source" /> money-source
     </label>
 
-    <input type="submit" />
+    <input type="submit" value="Авторизироваться" />
 </form>
