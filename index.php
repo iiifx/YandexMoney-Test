@@ -1,4 +1,17 @@
-<form method="POST" action="/do/oauth_request.php" target="_blank">
+<style type="text/css">
+    #oAuthForm {
+        width: 300px;
+        border: 1px solid #eee;
+        margin: 10px;
+        padding: 4px;
+    }
+    #oAuthForm label {
+        display: block;
+        margin: 2px;
+    }
+</style>
+
+<form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
 
     <label for="account-info">
         <input type="checkbox" name="scope[account-info]" value="account-info" id="account-info" /> account-info
