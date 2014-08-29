@@ -43,7 +43,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         width: 300px;
         border: 1px solid #eee;
         margin: 10px;
-        padding: 4px 4px 46px 4px;
+        padding: 4px 4px 30px 4px;
     }
     #oAuthForm label {
         display: block;
@@ -60,17 +60,16 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 </div>
 
 <form method="POST" action="/?do=oauth_request" id="oAuthForm">
-    <h4>Права авторизации oAuth:</h4>
+    <h4>Права авторизации oAuth:
+        <?php if ( isset( $oAuthCreate_Link ) ) { ?>
+            <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">Авторизироваться >></a>
+        <?php } ?>
+    </h4>
 
-    <?php if ( isset( $oAuthCreate_Link ) ) { ?>
-        <div>
-            <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">Перейти к авторизации oAuth</a>
-        </div>
-    <?php } ?>
     <?php if ( isset( $oAuthCreate_Error ) ) { ?>
-        <div>
+        <p>
             [ Ошибка: <?php echo $oAuthCreate_Error; ?> ]
-        </div>
+        </p>
     <?php } ?>
 
     <label for="account-info">
