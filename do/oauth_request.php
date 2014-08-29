@@ -20,7 +20,7 @@ if ( isset( $_POST[ 'scope' ] ) && is_array( $_POST[ 'scope' ] ) ) {
 //$rightsConfigurator->addRight( \YandexMoney\Presets\Rights::PAYMENT_P2P );
 
 $rightsConfigurator->paymentToAccount( YM_PURSE, \YandexMoney\Presets\PaymentIdentifier::ACCOUNT, 1, 10000 );
-$rightsConfigurator->paymentToPattern( "337", 1, 10000 );
+//$rightsConfigurator->paymentToPattern( "337", 1, 10000 );
 $rightsConfigurator->setMoneySource( \YandexMoney\Presets\MoneySource::WALLET );
 
 $authRequestBuilder = \YandexMoney\YandexMoney::getAuthRequestBuilder();
