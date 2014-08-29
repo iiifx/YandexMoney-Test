@@ -1,4 +1,25 @@
+<?php
+
+session_start();
+
+?>
+
 <style type="text/css">
+    * {
+        font-family: monospace;
+    }
+    h4 {
+        padding: 3px 0 3px 6px;
+        margin: 0;
+    }
+    #tokenBox {
+        border: 1px dashed #eee;
+        margin: 10px;
+        padding: 6px;
+    }
+    #tokenBox input[type="text"] {
+        width: 100%;
+    }
     #oAuthForm {
         width: 300px;
         border: 1px solid #eee;
@@ -14,9 +35,9 @@
     }
 </style>
 
-<div>
+<div id="tokenBox">
     <h4>Токен oAuth</h4>
-    <input type="text" name="token" value="" />
+    <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
 </div>
 
 <form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
