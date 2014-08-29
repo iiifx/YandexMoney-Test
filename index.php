@@ -55,9 +55,9 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     #oAuth_go, #oAuth_error {
         text-align: center;
         margin: 8px;
-        padding-left: 6px;
-        border: 1px solid #eee;
-        background-color: #efefef;
+        padding: 6px;
+        border: 1px solid #ccc;
+        background-color: #eee;
     }
 </style>
 
