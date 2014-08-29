@@ -28,9 +28,9 @@ $originalServerResponse = NULL;
 try {
     $originalServerResponse = $apiFacade->authorizeApplication( $authRequestBuilder );
 } catch ( \Exception $e ) {
-    echo '[Error: ' . $e->getMessage() . ' ]';
+    $oAuthCreate_Error = $e->getMessage();
 }
 
 if ( $originalServerResponse ) {
-    echo '<a href="' . $originalServerResponse->getHeader( 'Location' ) . '" target="_blank">Запрос oAuth на Yandex.Money</a>';
+    $oAuthCreate_Link = $originalServerResponse->getHeader( 'Location' );
 }

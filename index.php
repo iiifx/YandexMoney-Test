@@ -89,5 +89,15 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         <input type="checkbox" name="scope[money-source]" value="money-source" id="money-source" /> money-source
     </label>
 
-    <input type="submit" value="Авторизироваться" />
+    <input type="submit" value="Сгенерировать ссылку" />
+    <?php if ( isset( $oAuthCreate_Link ) ) { ?>
+    <div>
+        <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">Перейти к авторизации oAuth</a>
+    </div>
+    <?php } ?>
+    <?php if ( isset( $oAuthCreate_Error ) ) { ?>
+    <div>
+        Ошибка: <?php echo $oAuthCreate_Error; ?>
+    </div>
+    <?php } ?>
 </form>
