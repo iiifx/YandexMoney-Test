@@ -13,6 +13,8 @@ $loadList = array (
 foreach ( $loadList as $filePath ) {
     /** @noinspection PhpIncludeInspection */
     require_once( $filePath );
+
+    echo "[ {$filePath} ]";
 }
 
 if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
