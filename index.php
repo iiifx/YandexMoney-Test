@@ -5,7 +5,7 @@ session_start();
 define( 'BASEDIR', __DIR__ . '/' );
 
 $loadList = array (
-    BASEDIR . 'composer/vendor/autoload.php',
+    BASEDIR . '../composer/vendor/autoload.php',
     BASEDIR . 'options/seller.php'
 );
 
