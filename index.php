@@ -2,7 +2,7 @@
 
 session_start();
 
-define( 'BASEDIR', realpath( __DIR__ . '/../' ) );
+define( 'BASEDIR', realpath( __DIR__ . '/../' ) . '/' );
 
 $loadList = array (
     BASEDIR . 'composer/vendor/autoload.php',
