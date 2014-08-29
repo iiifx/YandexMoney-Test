@@ -3,7 +3,7 @@
         width: 300px;
         border: 1px solid #eee;
         margin: 10px;
-        padding: 4px;
+        padding: 4px 4px 30px 4px;
     }
     #oAuthForm label {
         display: block;
