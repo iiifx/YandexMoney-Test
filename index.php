@@ -9,6 +9,9 @@
         display: block;
         margin: 2px;
     }
+    #oAuthForm input[type="submit"] {
+        float: right;
+    }
 </style>
 
 <form method="POST" action="/do/oauth_request.php" target="_blank" id="oAuthForm">
