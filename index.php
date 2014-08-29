@@ -52,6 +52,13 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     #oAuthForm input[type="submit"] {
         float: right;
     }
+    #oAuth_go, #oAuth_error {
+        text-align: center;
+        margin: 8px;
+        padding-left: 6px;
+        border: 1px solid #eee;
+        background-color: #efefef;
+    }
 </style>
 
 <div id="tokenBox">
@@ -60,17 +67,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 </div>
 
 <form method="POST" action="/?do=oauth_request" id="oAuthForm">
-    <h4>Права авторизации oAuth:
-        <?php if ( isset( $oAuthCreate_Link ) ) { ?>
-            <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">Авторизироваться >></a>
-        <?php } ?>
-    </h4>
-
-    <?php if ( isset( $oAuthCreate_Error ) ) { ?>
-        <p>
-            [ Ошибка: <?php echo $oAuthCreate_Error; ?> ]
-        </p>
-    <?php } ?>
+    <h4>Права авторизации oAuth:</h4>
 
     <label for="account-info">
         <input type="checkbox" name="scope[account-info]" value="account-info" id="account-info" checked /> account-info
@@ -96,6 +93,17 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     <label for="money-source">
         <input type="checkbox" name="scope[money-source]" value="money-source" id="money-source" /> money-source
     </label>
+
+    <?php if ( isset( $oAuthCreate_Link ) ) { ?>
+        <div id="oAuth_go">
+            <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">>> Перейти к авторизации >></a>
+        </div>
+    <?php } ?>
+    <?php if ( isset( $oAuthCreate_Error ) ) { ?>
+        <div id="oAuth_error">
+            [ Ошибка: <?php echo $oAuthCreate_Error; ?> ]
+        </div>
+    <?php } ?>
 
     <input type="submit" value="Сгенерировать ссылку" />
 </form>
