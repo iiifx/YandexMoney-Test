@@ -7,7 +7,7 @@ define( 'BASEDIR', __DIR__ . '/' );
 
 $loadList = array (
     BASEDIR . '../composer/vendor/autoload.php',
-    BASEDIR . 'options/seller.php'
+    BASEDIR . 'options/seller_options.php'
 );
 
 foreach ( $loadList as $filePath ) {
@@ -64,6 +64,9 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 <div id="tokenBox">
     <h4>Токен oAuth</h4>
     <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
+    <a href="/?do=oauth_request&action=delete_token">
+        Удалить токен
+    </a>
 </div>
 
 <form method="POST" action="/?do=update_options" id="optionsForm">
