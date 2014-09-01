@@ -150,3 +150,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 
     <input type="submit" value="Сгенерировать ссылку" />
 </form>
+
+<?php if ( isset( $_SESSION[ 'token' ] ) && $_SESSION[ 'token' ] ) { ?>
+
+<?php } ?>
