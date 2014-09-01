@@ -33,7 +33,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     }
     #tokenBox {
         border: 1px dashed #eee;
-        margin: 10px;
+        margin: 10px 10px 0 0;
         padding: 6px;
     }
     #tokenBox input[type="text"] {
@@ -42,8 +42,8 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     #oAuthForm, #optionsForm {
         width: 300px;
         border: 1px solid #eee;
-        margin: 10px;
-        padding: 4px 4px 30px 4px;
+        margin: 10px 10px 0 0;
+        padding: 4px;
         float: left;
     }
     #oAuthForm label, #optionsForm label {
