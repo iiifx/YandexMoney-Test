@@ -1,63 +1,5 @@
 [
     {
-        "name": "yandex-money/yandex-money-sdk-php",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yandex-money/yandex-money-sdk-php.git",
-            "reference": "b9ac906a8bd9fa95a410159f866b52c797d0d9eb"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yandex-money/yandex-money-sdk-php/zipball/b9ac906a8bd9fa95a410159f866b52c797d0d9eb",
-            "reference": "b9ac906a8bd9fa95a410159f866b52c797d0d9eb",
-            "shasum": ""
-        },
-        "require": {
-            "ext-curl": "*",
-            "ext-json": "*",
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.1.*",
-            "silex/silex": "~1.2",
-            "symfony/browser-kit": "2.6.*@dev",
-            "symfony/finder": "2.3.*",
-            "symfony/framework-bundle": "2.5.*@dev"
-        },
-        "time": "2014-06-24 14:18:21",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "YandexMoney": [
-                    "lib/"
-                ]
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Yandex.Money",
-                "homepage": "https://github.com/yandex-money/yandex-money-sdk-php/graphs/contributors"
-            }
-        ],
-        "description": "Yandex.Money API SDK for PHP",
-        "homepage": "https://github.com/yandex-money/yandex-money-sdk-php",
-        "keywords": [
-            "money",
-            "payment",
-            "php",
-            "sdk",
-            "yandex",
-            "yandex.money"
-        ]
-    },
-    {
         "name": "monolog/monolog",
         "version": "1.2.1",
         "version_normalized": "1.2.1.0",
@@ -113,6 +55,64 @@
         "keywords": [
             "log",
             "logging"
+        ]
+    },
+    {
+        "name": "yandex-money/yandex-money-sdk-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yandex-money/yandex-money-sdk-php.git",
+            "reference": "44ed2d58c80f7d5c1930e48cf23042e99186807b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yandex-money/yandex-money-sdk-php/zipball/44ed2d58c80f7d5c1930e48cf23042e99186807b",
+            "reference": "44ed2d58c80f7d5c1930e48cf23042e99186807b",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.1.*",
+            "silex/silex": "~1.2",
+            "symfony/browser-kit": "2.6.*@dev",
+            "symfony/finder": "2.3.*",
+            "symfony/framework-bundle": "2.5.*@dev"
+        },
+        "time": "2014-09-01 07:03:45",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "YandexMoney": [
+                    "lib/"
+                ]
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Yandex.Money",
+                "homepage": "https://github.com/yandex-money/yandex-money-sdk-php/graphs/contributors"
+            }
+        ],
+        "description": "Yandex.Money API SDK for PHP",
+        "homepage": "https://github.com/yandex-money/yandex-money-sdk-php",
+        "keywords": [
+            "money",
+            "payment",
+            "php",
+            "sdk",
+            "yandex",
+            "yandex.money"
         ]
     }
 ]

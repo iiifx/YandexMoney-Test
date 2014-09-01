@@ -8,13 +8,16 @@ if ( isset( $_POST[ 'scope' ] ) && is_array( $_POST[ 'scope' ] ) ) {
     }
 }
 
+/*
 $rightsConfigurator->paymentToAccount(
     ( isset( $_SESSION[ 'sellerOptions_client-purse' ] ) ) ? $_SESSION[ 'sellerOptions_client-purse' ] : YM_PURSE,
     \YandexMoney\Presets\PaymentIdentifier::ACCOUNT,
     ( isset( $_POST[ 'scope_days' ] ) ) ? $_POST[ 'scope_days' ] : 1,
     ( isset( $_POST[ 'scope_amount' ] ) ) ? $_POST[ 'scope_amount' ] : 100
 );
-$rightsConfigurator->setMoneySource( \YandexMoney\Presets\MoneySource::WALLET );
+*/
+
+//$rightsConfigurator->setMoneySource( \YandexMoney\Presets\MoneySource::WALLET );
 
 $authRequestBuilder = \YandexMoney\YandexMoney::getAuthRequestBuilder();
 $authRequestBuilder->setClientId( ( isset( $_SESSION[ 'sellerOptions_client-id' ] ) ) ? $_SESSION[ 'sellerOptions_client-id' ] : YM_CLIENT_ID );

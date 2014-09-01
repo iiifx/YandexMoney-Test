@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yandex-money/yandex-money-sdk-php.git",
-                "reference": "b9ac906a8bd9fa95a410159f866b52c797d0d9eb"
+                "reference": "44ed2d58c80f7d5c1930e48cf23042e99186807b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yandex-money/yandex-money-sdk-php/zipball/b9ac906a8bd9fa95a410159f866b52c797d0d9eb",
-                "reference": "b9ac906a8bd9fa95a410159f866b52c797d0d9eb",
+                "url": "https://api.github.com/repos/yandex-money/yandex-money-sdk-php/zipball/44ed2d58c80f7d5c1930e48cf23042e99186807b",
+                "reference": "44ed2d58c80f7d5c1930e48cf23042e99186807b",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +116,7 @@
                 "yandex",
                 "yandex.money"
             ],
-            "time": "2014-06-24 14:18:21"
+            "time": "2014-09-01 07:03:45"
         }
     ],
     "packages-dev": [
