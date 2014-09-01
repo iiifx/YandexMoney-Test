@@ -53,7 +53,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         line-height: 26px;
         vertical-align: middle;
     }
-    #optionsForm input[type="text"] {
+    #oAuthForm  input[type="text"], #optionsForm input[type="text"] {
         float: right;
     }
     #oAuthForm input[type="submit"], #optionsForm input[type="submit"] {
@@ -121,6 +121,13 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     </label>
     <label for="money-source">
         <input type="checkbox" name="scope[money-source]" value="money-source" id="money-source" /> money-source
+    </label>
+
+    <label for="scope_amount">
+        Права на сумму <input type="text" name="scope_amount" value="100" id="scope_amount" />
+    </label>
+    <label for="scope_days">
+        Кол-во дней <input type="text" name="scope_days" value="1" id="scope_days" />
     </label>
 
     <?php if ( isset( $oAuthCreate_Link ) ) { ?>

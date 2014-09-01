@@ -14,7 +14,12 @@ if ( isset( $_POST[ 'scope' ] ) && is_array( $_POST[ 'scope' ] ) ) {
     }
 }
 
-$rightsConfigurator->paymentToAccount( ( isset( $_SESSION[ 'sellerOptions.client-purse' ] ) ) ? $_SESSION[ 'sellerOptions.client-purse' ] : YM_PURSE, \YandexMoney\Presets\PaymentIdentifier::ACCOUNT, 1, 10000 );
+$rightsConfigurator->paymentToAccount(
+    ( isset( $_SESSION[ 'sellerOptions.client-purse' ] ) ) ? $_SESSION[ 'sellerOptions.client-purse' ] : YM_PURSE,
+    \YandexMoney\Presets\PaymentIdentifier::ACCOUNT,
+    ( isset( $_POST[ 'scope_days' ] ) ) ? $_POST[ 'scope_days' ] : 1,
+    ( isset( $_POST[ 'scope_amount' ] ) ) ? $_POST[ 'scope_amount' ] : 100
+);
 $rightsConfigurator->setMoneySource( \YandexMoney\Presets\MoneySource::WALLET );
 
 $authRequestBuilder = \YandexMoney\YandexMoney::getAuthRequestBuilder();
