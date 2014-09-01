@@ -13,4 +13,5 @@ if ( $_POST ) {
     if ( isset( $_POST[ 'sellerOptions.client-secret' ] ) && $_POST[ 'sellerOptions.client-secret' ] ) {
         $_SESSION[ 'sellerOptions.client-secret' ] = $_POST[ 'sellerOptions.client-secret' ];
     }
+    var_export( $_POST );
 }
