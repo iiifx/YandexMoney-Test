@@ -74,12 +74,8 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 </style>
 
 <div id="linkBox">
-    <a href="/">
-        Главная
-    </a>
-    <a href="/?do=oauth_response&action=delete_token">
-        Удалить токен
-    </a>
+    <a href="/">Главная</a>
+    <a href="/?do=oauth_response&action=delete_token">Удалить токен</a>
 </div>
 
 <div id="tokenBox">
