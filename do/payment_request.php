@@ -10,11 +10,9 @@ if ( isset( $_SESSION[ 'token' ] ) && $token = $_SESSION[ 'token' ] ) {
     $p2pPaymentRequest->setMessage( '###Message###' );
     $p2pPaymentRequest->setLabel( '###Label###' );
 
-    /*
     $p2pPaymentRequest->setTestPayment( FALSE );
     $p2pPaymentRequest->setTestCard( '0000111122223333' );
     $p2pPaymentRequest->setTestResult( 'success' );
-    */
 
     $response = NULL;
     try {
