@@ -17,8 +17,10 @@ foreach ( $loadList as $filePath ) {
 
 if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     str_replace( '..', '.', $do );
-    /** @noinspection PhpIncludeInspection */
-    require_once( BASEDIR . "do/{$do}.php" );
+    if ( is_file( BASEDIR . "do/{$do}.php" ) ) {
+        /** @noinspection PhpIncludeInspection */
+        require_once( BASEDIR . "do/{$do}.php" );
+    }
 }
 
 ?>
@@ -124,10 +126,10 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     </label>
 
     <label for="scope_amount">
-        Права на сумму <input type="text" name="scope_amount" value="100" id="scope_amount" />
+        scope-amount <input type="text" name="scope_amount" value="100" id="scope_amount" />
     </label>
     <label for="scope_days">
-        Кол-во дней <input type="text" name="scope_days" value="1" id="scope_days" />
+        scope-days <input type="text" name="scope_days" value="1" id="scope_days" />
     </label>
 
     <?php if ( isset( $oAuthCreate_Link ) ) { ?>
