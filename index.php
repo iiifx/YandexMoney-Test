@@ -68,7 +68,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 <div id="tokenBox">
     <h4>Токен oAuth</h4>
     <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
-    <a href="/?do=oauth_request&action=delete_token">
+    <a href="/?do=oauth_response&action=delete_token">
         Удалить токен
     </a>
 </div>
