@@ -39,17 +39,17 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     #tokenBox input[type="text"] {
         width: 100%;
     }
-    #oAuthForm {
+    #oAuthForm, #optionsForm {
         width: 300px;
         border: 1px solid #eee;
         margin: 10px;
         padding: 4px 4px 30px 4px;
     }
-    #oAuthForm label {
+    #oAuthForm label, #optionsForm label {
         display: block;
         margin: 2px;
     }
-    #oAuthForm input[type="submit"] {
+    #oAuthForm input[type="submit"], #optionsForm input[type="submit"] {
         float: right;
     }
     #oAuth_go, #oAuth_error {
@@ -65,6 +65,25 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     <h4>Токен oAuth</h4>
     <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
 </div>
+
+<form method="POST" action="/?do=update_options" id="optionsForm">
+    <h4>Данные продавца Yandex.Money:</h4>
+
+    <label for="client-purse">
+        client-purse <input type="text" name="sellerOptions[client-purse]" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-purse' ] ) ) ? $_SESSION[ 'sellerOptions.client-purse' ] : YM_PURSE; ?>" id="client-purse" />
+    </label>
+    <label for="response-link">
+        response-link <input type="text" name="sellerOptions[response-link]" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.response-link' ] ) ) ? $_SESSION[ 'sellerOptions.response-link' ] : YM_RESPONSE_LINK; ?>" id="client-purse" />
+    </label>
+    <label for="client-id">
+        client-id <input type="text" name="sellerOptions[client-id]" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-id' ] ) ) ? $_SESSION[ 'sellerOptions.client-id' ] : YM_CLIENT_ID; ?>" id="client-purse" />
+    </label>
+    <label for="client-secret">
+        client-secret <input type="text" name="sellerOptions[client-secret]" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-secret' ] ) ) ? $_SESSION[ 'sellerOptions.client-secret' ] : YM_CLIENT_SECRET; ?>" id="client-purse" />
+    </label>
+
+    <input type="submit" value="Обновить данные" />
+</form>
 
 <form method="POST" action="/?do=oauth_request" id="oAuthForm">
     <h4>Права авторизации oAuth:</h4>
