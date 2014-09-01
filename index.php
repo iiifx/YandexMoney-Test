@@ -49,6 +49,9 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     #oAuthForm label, #optionsForm label {
         display: block;
         margin: 2px;
+        height: 26px;
+        line-height: 26px;
+        vertical-align: middle;
     }
     #optionsForm input[type="text"] {
         float: right;
