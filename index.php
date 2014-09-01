@@ -96,7 +96,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
 
     <?php if ( isset( $oAuthCreate_Link ) ) { ?>
         <div id="oAuth_go">
-            <a href="<?php echo $oAuthCreate_Link; ?>" target="_blank">>> Перейти к авторизации >></a>
+            <a href="<?php echo $oAuthCreate_Link; ?>">>> Перейти к авторизации >></a>
         </div>
     <?php } ?>
     <?php if ( isset( $oAuthCreate_Error ) ) { ?>
