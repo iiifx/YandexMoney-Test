@@ -13,10 +13,4 @@ if ( $_POST ) {
     if ( isset( $_POST[ 'sellerOptions_client-secret' ] ) && $_POST[ 'sellerOptions_client-secret' ] ) {
         $_SESSION[ 'sellerOptions_client-secret' ] = $_POST[ 'sellerOptions_client-secret' ];
     }
-
-    echo '<pre>';
-    var_export( $_POST );
-    var_export( $_SESSION );
-    echo '</pre>';
-
 }
