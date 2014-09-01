@@ -88,16 +88,16 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     <h4>Данные продавца Yandex.Money:</h4>
 
     <label for="client-purse">
-        client-purse <input type="text" name="sellerOptions.client-purse" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-purse' ] ) ) ? $_SESSION[ 'sellerOptions.client-purse' ] : YM_PURSE; ?>" id="client-purse" />
+        client-purse <input type="text" name="sellerOptions_client-purse" value="<?php echo ( isset( $_SESSION[ 'sellerOptions_client-purse' ] ) ) ? $_SESSION[ 'sellerOptions_client-purse' ] : YM_PURSE; ?>" id="client-purse" />
     </label>
     <label for="response-link">
-        response-link <input type="text" name="sellerOptions.response-link" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.response-link' ] ) ) ? $_SESSION[ 'sellerOptions.response-link' ] : YM_RESPONSE_LINK; ?>" id="client-purse" />
+        response-link <input type="text" name="sellerOptions_response-link" value="<?php echo ( isset( $_SESSION[ 'sellerOptions_response-link' ] ) ) ? $_SESSION[ 'sellerOptions_response-link' ] : YM_RESPONSE_LINK; ?>" id="client-purse" />
     </label>
     <label for="client-id">
-        client-id <input type="text" name="sellerOptions.client-id" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-id' ] ) ) ? $_SESSION[ 'sellerOptions.client-id' ] : YM_CLIENT_ID; ?>" id="client-purse" />
+        client-id <input type="text" name="sellerOptions_client-id" value="<?php echo ( isset( $_SESSION[ 'sellerOptions_client-id' ] ) ) ? $_SESSION[ 'sellerOptions_client-id' ] : YM_CLIENT_ID; ?>" id="client-purse" />
     </label>
     <label for="client-secret">
-        client-secret <input type="text" name="sellerOptions.client-secret" value="<?php echo ( isset( $_SESSION[ 'sellerOptions.client-secret' ] ) ) ? $_SESSION[ 'sellerOptions.client-secret' ] : YM_CLIENT_SECRET; ?>" id="client-purse" />
+        client-secret <input type="text" name="sellerOptions_client-secret" value="<?php echo ( isset( $_SESSION[ 'sellerOptions_client-secret' ] ) ) ? $_SESSION[ 'sellerOptions_client-secret' ] : YM_CLIENT_SECRET; ?>" id="client-purse" />
     </label>
 
     <input type="submit" value="Обновить данные" />
