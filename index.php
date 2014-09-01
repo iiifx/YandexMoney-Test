@@ -33,7 +33,7 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         padding: 3px 0 3px 6px;
         margin: 0;
     }
-    #tokenBox {
+    #tokenBox, #linkBox {
         border: 1px dashed #eee;
         margin: 10px 10px 0 0;
         padding: 6px;
@@ -69,6 +69,12 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         background-color: #eee;
     }
 </style>
+
+<div id="linkBox">
+    <a href="/">
+        Главная
+    </a>
+</div>
 
 <div id="tokenBox">
     <h4>Токен oAuth</h4>
