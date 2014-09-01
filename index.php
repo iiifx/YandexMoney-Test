@@ -38,6 +38,9 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         margin: 10px 10px 0 0;
         padding: 6px;
     }
+    #linkBox a {
+        margin: 10px;
+    }
     #tokenBox input[type="text"] {
         width: 100%;
     }
@@ -74,14 +77,14 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
     <a href="/">
         Главная
     </a>
+    <a href="/?do=oauth_response&action=delete_token">
+        Удалить токен
+    </a>
 </div>
 
 <div id="tokenBox">
     <h4>Токен oAuth</h4>
     <input type="text" name="token" value="<?php if ( isset( $_SESSION[ 'token' ] ) ) echo $_SESSION[ 'token' ]; ?>" />
-    <a href="/?do=oauth_response&action=delete_token">
-        Удалить токен
-    </a>
 </div>
 
 <form method="POST" action="/?do=update_options" id="optionsForm">
