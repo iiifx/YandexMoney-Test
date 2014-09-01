@@ -14,18 +14,12 @@ if ( isset( $_POST[ 'scope' ] ) && is_array( $_POST[ 'scope' ] ) ) {
     }
 }
 
-//$rightsConfigurator->addRight( \YandexMoney\Presets\Rights::ACCOUNT_INFO );
-//$rightsConfigurator->addRight( \YandexMoney\Presets\Rights::OPERATION_HISTORY );
-//$rightsConfigurator->addRight( \YandexMoney\Presets\Rights::OPERATION_DETAILS );
-//$rightsConfigurator->addRight( \YandexMoney\Presets\Rights::PAYMENT_P2P );
-
-$rightsConfigurator->paymentToAccount( YM_PURSE, \YandexMoney\Presets\PaymentIdentifier::ACCOUNT, 1, 10000 );
-//$rightsConfigurator->paymentToPattern( "337", 1, 10000 );
+$rightsConfigurator->paymentToAccount( ( isset( $_SESSION[ 'sellerOptions.client-purse' ] ) ) ? $_SESSION[ 'sellerOptions.client-purse' ] : YM_PURSE, \YandexMoney\Presets\PaymentIdentifier::ACCOUNT, 1, 10000 );
 $rightsConfigurator->setMoneySource( \YandexMoney\Presets\MoneySource::WALLET );
 
 $authRequestBuilder = \YandexMoney\YandexMoney::getAuthRequestBuilder();
-$authRequestBuilder->setClientId( YM_CLIENT_ID );
-$authRequestBuilder->setRedirectUri( YM_RESPONSE_LINK );
+$authRequestBuilder->setClientId( ( isset( $_SESSION[ 'sellerOptions.client-id' ] ) ) ? $_SESSION[ 'sellerOptions.client-id' ] : YM_CLIENT_ID );
+$authRequestBuilder->setRedirectUri( ( isset( $_SESSION[ 'sellerOptions.response-link' ] ) ) ? $_SESSION[ 'sellerOptions.response-link' ] : YM_RESPONSE_LINK );
 $authRequestBuilder->setRights( $rightsConfigurator->toString() );
 
 $apiFacade = \YandexMoney\YandexMoney::getApiFacade();

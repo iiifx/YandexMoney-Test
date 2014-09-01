@@ -44,10 +44,14 @@ if ( isset( $_GET[ 'do' ] ) && ( $do = $_GET[ 'do' ] ) ) {
         border: 1px solid #eee;
         margin: 10px;
         padding: 4px 4px 30px 4px;
+        float: left;
     }
     #oAuthForm label, #optionsForm label {
         display: block;
         margin: 2px;
+    }
+    #optionsForm input[type="text"] {
+        float: right;
     }
     #oAuthForm input[type="submit"], #optionsForm input[type="submit"] {
         float: right;
